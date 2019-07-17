@@ -1,8 +1,8 @@
 # Pamazon
-###CLI Storefront
-####An Amazon-like storefront utilizing MySQL and Node.js.  The app will take in orders from customers and deplete stock from the store's inventory.
+### CLI Storefront
+#### An Amazon-like storefront utilizing MySQL and Node.js.  The app will take in orders from customers and deplete stock from the store's inventory.
 
-###Customer CLI
+### Customer CLI
 * Create a MySQL Database.
 * Create a Table inside of that database called products.
 * The products table should have each of the following columns:
