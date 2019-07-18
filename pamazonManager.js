@@ -25,14 +25,14 @@ function startPrompt() {
         type: "list",
         name: "actionList",
         message: "What would you like to review?",
-        choices: ["View Products For Sale", "View Low Inventory", "Add To Inventory", "Add New Product"]
+        choices: ["View Products For Sale", "View Low Inventory", "Update Inventory", "Add New Product"]
 
     }]).then(function(user) {
         if (user.actionList === "View Products For Sale") {
             inventoryView();
         } else if (user.actionList === "View Low Inventory") {
             lowInventory();
-        } else if (user.actionList === "Add To Inventory") {
+        } else if (user.actionList === "Update Inventory") {
             addInventory();
         } else {
             addProduct();
@@ -117,7 +117,7 @@ function lowInventory() {
     }
 }
 
-//Add Inventory
+//Update Inventory
 
 function addInventory() {
 
@@ -142,6 +142,8 @@ function addInventory() {
                   item_id: managerAdd.inputId
               }], function(err, res) {
               });
+              inventoryView();
+
           startPrompt();
         });
       }
@@ -153,35 +155,45 @@ function addProduct() {
 
 
     inquirer.prompt([{
-
+        
             type: "input",
-            name: "inputName",
+            name: "ID",
+            message: "Please enter the item ID of the new product.",
+        },
+        {
+            type: "input",
+            name: "Name",
             message: "Please enter the item name of the new product.",
         },
         {
             type: "input",
-            name: "inputDepartment",
-            message: "Please enter which department name of which the new product belongs.",
+            name: "Department",
+            message: "Please enter the department of the new product.",
         },
         {
             type: "input",
-            name: "inputPrice",
+            name: "Price",
             message: "Please enter the price of the new product (0.00).",
         },
         {
             type: "input",
-            name: "inputStock",
+            name: "Stock",
             message: "Please enter the stock quantity of the new product.",
         }
 
-    ]).then(function(managerNew) {
+    ]).then(function(answers) {
+        var ID = answers.ID;
+		var name = answers.Name;
+		var department = answers.Department;
+		var price = answers.Price;
+		var stock = answers.Stock;
+		buildNewItem(ID,name,department,price,stock); 
+	});
+  };
 
-      connection.query("INSERT INTO products SET ?", {
-        product_name: managerNew.inputName,
-        department_name: managerNew.inputDepartment,
-        price: managerNew.inputPrice,
-        stock_quantity: managerNew.inputStock
-      }, function(err, res) {});
-      startPrompt();
-    });
-}
+  function buildNewItem(ID,name,department,price,stock){
+      connection.query('INSERT INTO products  VALUES("' + ID + '","' + name + '","' + department + '",' + price + ',' + stock +  ')');
+      
+  	inventoryView();
+  };
+
