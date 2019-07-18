@@ -144,7 +144,6 @@ function addInventory() {
               });
               inventoryView();
 
-          startPrompt();
         });
       }
 

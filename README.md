@@ -38,3 +38,28 @@
 * Purchases update the SQL database to reflect the remaining quantity.
 ![Starting Stock](https://github.com/pamelatholan/Pamazon/blob/master/images/starting_stockqty.PNG)
 ![After Purchase](https://github.com/pamelatholan/Pamazon/blob/master/images/qty_afterpurch.PNG)
+
+### Manager CLI
+* List a set of menu options for Store Managers to monitor their products
+    * View Products for Sale
+    * View Low Inventory
+    * Update Inventory
+    * Add New Product
+
+![Manager View]()
+
+* View Products for Sale
+
+![Inventory]()
+
+* View Low Inventory
+
+![Low Inventory]()
+
+* Update Inventory
+
+![Update]()
+
+* Add Inventory
+
+![Add]()
