@@ -32,7 +32,7 @@ function startPrompt() {
         if (user.confirm === true) {
             inventory();
         } else {
-            console.log("Thank you! Come back soon!");
+            console.log("Ok, please come back soon!");
         }
     });
 }
@@ -87,7 +87,7 @@ function continuePrompt() {
         if (user.continue === true) {
             selectionPrompt();
         } else {
-            console.log("Thank you! Come back soon!");
+            console.log("Ok, please come back soon!");
         }
     });
 }
@@ -170,7 +170,7 @@ function confirmPrompt(newStock, purchaseId) {
             startPrompt();
         } else {
             console.log("=================================");
-            console.log("No worries. Maybe next time!");
+            console.log("No worries. Maybe next time.");
             console.log("=================================");
             startPrompt();
         }
