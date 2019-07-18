@@ -46,20 +46,20 @@
     * Update Inventory
     * Add New Product
 
-![Manager View]()
+![Manager View](https://github.com/pamelatholan/Pamazon/blob/master/images/manager_options.PNG)
 
 * View Products for Sale
 
-![Inventory]()
+![Inventory](https://github.com/pamelatholan/Pamazon/blob/master/images/view_inventory.PNG)
 
 * View Low Inventory
 
-![Low Inventory]()
+![Low Inventory](https://github.com/pamelatholan/Pamazon/blob/master/images/low_inventory.PNG)
 
 * Update Inventory
 
-![Update]()
+![Update](https://github.com/pamelatholan/Pamazon/blob/master/images/update.PNG)
 
 * Add Inventory
 
-![Add]()
+![Add](https://github.com/pamelatholan/Pamazon/blob/master/images/add.PNG)
