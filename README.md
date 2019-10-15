@@ -1,6 +1,5 @@
 # Pamazon
-### CLI Storefront
-#### An Amazon-like storefront utilizing MySQL and Node.js.  The app will take in orders from customers and deplete stock from the store's inventory.
+An Amazon-like storefront utilizing MySQL and Node.js.  The app will take in orders from customers and deplete stock from the store's inventory.
 
 ### Customer CLI
 * Create a MySQL Database.
@@ -63,3 +62,8 @@
 * Add Inventory
 
 ![Add](https://github.com/pamelatholan/Pamazon/blob/master/images/add.PNG)
+
+### Tools/Languages Used:
+* MySQL
+* NodeJS
+* JavaScript
